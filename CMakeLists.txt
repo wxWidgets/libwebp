@@ -9,7 +9,7 @@
 if(APPLE)
   cmake_minimum_required(VERSION 3.17)
 else()
-  cmake_minimum_required(VERSION 3.7)
+  cmake_minimum_required(VERSION 3.7...3.31)
 endif()
 
 if(POLICY CMP0072)

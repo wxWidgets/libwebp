@@ -15,7 +15,7 @@ function(webp_check_compiler_flag WEBP_SIMD_FLAG ENABLE_SIMD)
     set(WEBP_HAVE_${WEBP_SIMD_FLAG} 0 PARENT_SCOPE)
     return()
   endif()
-  unset(WEBP_HAVE_FLAG_${WEBP_SIMD_FLAG} CACHE)
+  # unset(WEBP_HAVE_FLAG_${WEBP_SIMD_FLAG} CACHE)
   cmake_push_check_state()
   set(CMAKE_REQUIRED_INCLUDES ${CMAKE_CURRENT_SOURCE_DIR})
   check_c_source_compiles(
