@@ -142,7 +142,9 @@ if(HAVE_WINCODEC_H)
 endif()
 
 # Check for SIMD extensions.
-include(${CMAKE_CURRENT_LIST_DIR}/cpu.cmake)
+if(NOT DEFINED WEBP_CHECK_SIMD OR WEBP_CHECK_SIMD)
+  include(${CMAKE_CURRENT_LIST_DIR}/cpu.cmake)
+endif()
 
 # Define extra info.
 set(PACKAGE ${PROJECT_NAME})
